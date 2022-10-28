@@ -1,0 +1,14 @@
+The first idea is to consider the pages as the nodes of a binary tree (oriented 
+starting from the root). We can go from the root to any other node in 9 clicks and we 
+still have the leaves available to connect. 
+
+The second idea is to continue to connect the leaves such that the binary tree becomes
+cyclical (kind of). The first leaf connects to the first and second node, the second
+leaf connects with the third and fourth etc. (in the depth-first search order). Notice
+this actually works: from each vertex, after k steps we reach 2**k consecutive
+vertices (in the depth first search order and cyclically).So after 10 steps we can
+reach 1024 consecutive vertices (in particular all the 1000 distinct vertices).
+
+Formally, we can also index the pages 1,2,...,1000 and connect each x to 2*x and 2*x+1 
+mod 1000. After 10 steps we reach 1024*x, 1024*x+1,..., 1024*x + 1023 (mod 1000) which
+contain all 1000 pages.

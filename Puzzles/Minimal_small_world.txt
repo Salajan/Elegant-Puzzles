@@ -1,0 +1,5 @@
+You design a website with 1000 pages. On each page you can put links to two other 
+pages. How do you assign  the links such you can go between any two pages by clicking 
+on at most 10 links?
+
+(Source: atcoder.jp)
